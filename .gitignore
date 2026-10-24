@@ -1,0 +1,29 @@
+﻿.env
+.env.*
+!.env.example
+**/secrets/
+*.pem
+*.key
+**/alertmanager.yml
+**/*token*.json
+*.backup*
+*.bak
+**/data/
+**/logs/
+**/backups/
+**/reports/
+**/__pycache__/
+*.py[cod]
+**/.venv/
+**/venv/
+*.mp4
+*.mov
+*.mkv
+.DS_Store
+Thumbs.db
+
+# Local test payloads
+groundzero/docker/*test*.json
+
+# Exclude local test payloads
+groundzero/docker/*test*.json

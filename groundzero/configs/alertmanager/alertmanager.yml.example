@@ -1,0 +1,20 @@
+﻿global:
+  resolve_timeout: 5m
+
+route:
+  receiver: telegram
+  routes:
+    - receiver: telegram
+      continue: true
+    - receiver: sherlock
+
+receivers:
+  - name: telegram
+    telegram_configs:
+      - bot_token: "REPLACE_WITH_YOUR_BOT_TOKEN"
+        chat_id: 123456789
+        send_resolved: true
+
+  - name: sherlock
+    webhook_configs:
+      - url: "http://sherlock:5000/webhook"
