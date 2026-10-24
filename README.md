@@ -1,105 +1,55 @@
-﻿\# GroundZero â€” Reliability Monitoring \& Alerting Platform
+﻿# GroundZero - Reliability Monitoring & Alerting Platform
 
+A self-hosted reliability monitoring and alerting prototype built using Docker and open-source technologies.
 
-
-A self-hosted reliability monitoring and alerting prototype built using Docker and open-source monitoring technologies.
-
-
-
-\## Overview
-
-
+## Overview
 
 GroundZero monitors system performance, evaluates predefined alert conditions, and delivers notifications through Telegram.
 
+## Technology Stack
 
+- Docker and Docker Compose
+- Prometheus
+- Node Exporter
+- Grafana
+- Alertmanager
+- Loki and Promtail
+- Python
+- Telegram Bot API
 
-\## Technology Stack
+## Project Components
 
+### GroundZero
 
+Metrics collection, alert rules, dashboard visualization, and notification routing.
 
-\- Docker and Docker Compose
+### Sherlock
 
-\- Prometheus
+A lightweight Python HTTP service for receiving alert webhooks. Further log investigation and root-cause analysis are under development.
 
-\- Node Exporter
+## Demonstrated Features
 
-\- Grafana
+- Prometheus metrics collection.
+- Grafana CPU, memory, network, and disk dashboard.
+- CPU alert rule configured above 30%.
+- Memory alert rule configured above 80%.
+- Alertmanager notification routing.
+- Successful Telegram notification tests from Windows.
 
-\- Alertmanager
+## Current Development Status
 
-\- Loki and Promtail
+The monitoring dashboard, Prometheus rules, and Alertmanager-to-Telegram notification workflow have been demonstrated.
 
-\- Python
+Sherlock Docker networking, advanced incident analysis, and automated remediation remain under development.
 
-\- Telegram Bot API
+## Demo Video
 
+See the Windows demonstration video in the repository Releases section.
 
+## Security
 
-\## Architecture
+Never commit Telegram bot tokens, passwords, private configuration files, or runtime data.
 
-
-
-\*\*GroundZero:\*\* Metrics collection, alert rules, dashboard visualization and notification routing.
-
-
-
-\*\*Sherlock:\*\* Lightweight Python HTTP service for receiving alert webhooks. Further log investigation and root-cause analysis are planned.
-
-
-
-\## Demonstrated Features
-
-
-
-\- CPU and memory monitoring.
-
-\- Grafana system metrics dashboard.
-
-\- Prometheus alert rules.
-
-\- CPU alert threshold: 30%.
-
-\- Memory alert threshold: 80%.
-
-\- Alertmanager notification routing.
-
-\- Successful Telegram notification tests from Windows 11.
-
-\- Docker-based deployment.
-
-
-
-\## Current Status
-
-
-
-The Grafana dashboard, Prometheus metrics collection, alert rules and Alertmanager-to-Telegram delivery have been demonstrated.
-
-
-
-Sherlock's Docker networking, advanced incident analysis and automated remediation remain under development.
-
-
-
-\## Configuration
-
-
-
-Use the supplied Alertmanager example file as a template. Add your own Telegram bot token and chat ID locally. Never commit actual credentials.
-
-
-
-\## Demonstration
-
-
-
-The GroundZero Windows demonstration video will be available under the repository's Releases section.
-
-
-
-\## Project Status
-
-
+## Project Status
 
 Working prototype under active development.
